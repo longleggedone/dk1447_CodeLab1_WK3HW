@@ -19,7 +19,7 @@ public class GameManagerScript : MonoBehaviour {
 	private const int HEALTH_MIN = 0;
 	public const int HEALTH_MAX = 5;
 
-	public int damageAmt = 1;
+	//public int damageAmt = 1;
 
 	private static int health;
 
@@ -38,6 +38,8 @@ public class GameManagerScript : MonoBehaviour {
 			if(health < HEALTH_MIN){
 				health = HEALTH_MIN;
 			}
+
+			Debug.Log (Health);
 		}
 	}
 		
