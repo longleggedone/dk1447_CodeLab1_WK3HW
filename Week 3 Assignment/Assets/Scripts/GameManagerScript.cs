@@ -12,7 +12,7 @@ public class GameManagerScript : MonoBehaviour {
 		}
 		set{
 			score = value;
-			Debug.Log (Score);
+			Debug.Log ("Score: " + Score);
 		}
 	}
 
@@ -39,7 +39,7 @@ public class GameManagerScript : MonoBehaviour {
 				health = HEALTH_MIN;
 			}
 
-			Debug.Log (Health);
+			Debug.Log ("Health: " + Health);
 		}
 	}
 		
