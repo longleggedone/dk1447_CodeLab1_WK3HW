@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour {
 
@@ -11,7 +12,7 @@ public class GameManagerScript : MonoBehaviour {
 		}
 		set{
 			score = value;
-
+			Debug.Log (Score);
 		}
 	}
 
@@ -50,10 +51,18 @@ public class GameManagerScript : MonoBehaviour {
 		else{
 			Destroy(this.gameObject);
 		}
+
+		score = 0;
+		health = HEALTH_MAX;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(score == 100){
+			SceneManager.LoadScene("Scene 2");
+		}
+		if(health == 0){
+			SceneManager.LoadScene("Scene 1");
+		}
 	}
 }
